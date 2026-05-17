@@ -6,6 +6,8 @@ import java.util.*;
 
 public class Jogo {
 
+    private static Jogo instancia;
+
     private int eraAtual;
     private EstadoJogo estado;
     private final List<Jogador> jogadores;
@@ -29,7 +31,7 @@ public class Jogo {
 
     private final Map<Jogador, int[]> pontuacaoPorEra;
 
-    public Jogo(Scanner scanner) {
+    private Jogo(Scanner scanner) {
         this.scanner = scanner;
         this.jogadores = new ArrayList<>();
         this.tabuleiro = new Tabuleiro();
@@ -37,6 +39,13 @@ public class Jogo {
         this.pontuacaoPorEra = new LinkedHashMap<>();
         this.estado = EstadoJogo.CADASTRO;
         this.eraAtual = 0;
+    }
+
+    public static Jogo getInstancia(Scanner scanner) {
+        if (instancia == null) {
+            instancia = new Jogo(scanner);
+        }
+        return instancia;
     }
 
     private List<Diva> criarTodasDivas() {
