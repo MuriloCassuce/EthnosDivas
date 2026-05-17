@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Jogo jogo = new Jogo(scanner);
+        Jogo jogo = Jogo.getInstancia(scanner);
         jogo.iniciar();
         scanner.close();
     }
