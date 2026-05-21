@@ -12,7 +12,7 @@ public class Madonna extends Diva {
     }
 
     public void ativarPoder(Contexto ctx) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = ctx.getScanner();
         List<Diva> divasAtivas = ctx.getJogo().getDivasAtivas();
         List<Diva> opcoes = new ArrayList();
 
