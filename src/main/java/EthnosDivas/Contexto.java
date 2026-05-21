@@ -1,5 +1,7 @@
 package EthnosDivas;
 
+import java.util.Scanner;
+
 public class Contexto {
 
     private final Jogador jogadorAtivo;
@@ -15,7 +17,7 @@ public class Contexto {
         this.tabuleiro = tabuleiro;
         this.baralho = baralho;
         this.jogo = jogo;
-        this.scanner = scanner
+        this.scanner = scanner;
     }
 
     public Jogador getJogadorAtivo() {
