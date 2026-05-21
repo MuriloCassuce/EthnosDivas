@@ -12,7 +12,7 @@ public class DuaLipa extends Diva {
 
     @Override
     public void ativarPoder(Contexto ctx) {
-        Scanner scanner = ctx.getScanner();;
+        Scanner scanner = ctx.getScanner();
         Jogador jogador = ctx.getJogadorAtivo();
         Tabuleiro tabuleiro = ctx.getTabuleiro();
         List<Mercado> mercados = tabuleiro.getMercados();
