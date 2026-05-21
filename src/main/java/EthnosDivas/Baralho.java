@@ -73,10 +73,19 @@ public class Baralho {
     }
 
     private void reporCartasVisiveis() {
+        while (cartasVisiveis.size() < MAX_VISIVEIS && !cartas.isEmpty()) {
+            Carta carta = cartas.remove(0);
+            if (carta.ehEscandalo()) {
+                revelarEscandalo();
+            } else {
+            cartasVisiveis.add(carta);
+            }
+        }
     }
 
     public void preencherCartasVisiveis() {
         cartasVisiveis.clear();
+        reporCartasVisiveis();
     }
 
     /** Retorna true se o baralho está vazio. */
