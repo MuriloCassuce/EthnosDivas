@@ -17,7 +17,7 @@ public class TaylorSwift extends Diva {
     }
 
     public void ativarPoder(Contexto ctx) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = ctx.getScanner();
         Jogador jogador = ctx.getJogadorAtivo();
         Tabuleiro tabuleiro = ctx.getTabuleiro();
         List<Mercado> mercados = tabuleiro.getMercados();

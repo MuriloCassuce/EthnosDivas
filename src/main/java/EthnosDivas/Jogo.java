@@ -370,7 +370,7 @@ public class Jogo {
 
         Diva divaLider = lider.getDiva();
         System.out.println("  Ativando poder de " + divaLider.getNome() + "...");
-        Contexto ctx = new Contexto(jogadorAtual, turne, tabuleiro, baralho, this);
+        Contexto ctx = new Contexto(jogadorAtual, turne, tabuleiro, baralho, this, scanner);
         divaLider.ativarPoder(ctx);
 
         if (!rihannaPularContrato) {
