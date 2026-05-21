@@ -370,7 +370,6 @@ public class Jogo {
 
         Mercado mercadoAlvo = turne.getMercadoAlvo();
         int contratosAdversarios = maiorContratoAdversario(mercadoAlvo, jogadorAtual);
-        boolean podeColocarContrato = lordePoderAtivo || turne.getTamanho() > contratosAdversarios;
 
         int fama = turne.calcularFama();
         jogadorAtual.adicionarFama(fama);
@@ -381,6 +380,8 @@ public class Jogo {
         System.out.println("  Ativando poder de " + divaLider.getNome() + "...");
         Contexto ctx = new Contexto(jogadorAtual, turne, tabuleiro, baralho, this, scanner);
         divaLider.ativarPoder(ctx);
+
+        boolean podeColocarContrato = lordePoderAtivo || turne.getTamanho() > contratosAdversarios;
 
         if (!rihannaPularContrato) {
             if (podeColocarContrato) {
