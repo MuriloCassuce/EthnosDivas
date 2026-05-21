@@ -12,7 +12,7 @@ public class ArianaGrande extends Diva {
 
     @Override
     public void ativarPoder(Contexto ctx) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = ctx.getScanner();
         Jogador jogador = ctx.getJogadorAtivo();
         Baralho baralho = ctx.getBaralho();
         List<Carta> visiveis = baralho.getCartasVisiveis();
