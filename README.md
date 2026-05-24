@@ -2,6 +2,7 @@
 
 > **Jogo de tabuleiro musical baseado no sistema Ethnos**, implementado em Java.  
 > Reúna suas divas, domine regiões e conquiste a glória da indústria musical!
+> Documento funcional: https://docs.google.com/document/d/1f7Jx89gCZAgcLZbVYug_0BMRnnPbfkui/edit?usp=sharing&ouid=103619233349678714027&rtpof=true&sd=true
 
 ---
 
